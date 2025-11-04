@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+void findEven(int arr[], int size)
+{
+    bool bit = true;
+    for(int i=0;i < size;i++)
+    {
+        if (arr[i] % 2 == 0)
+        {
+            cout<<arr[i]<<" ";
+            bit = false;
+        }
+    }
+
+    if(bit == true)
+    {
+        cout<<"No Even number in array";
+    }
+}
+
+int main()
+{
+    int size;
+
+    cout<<"Enter Size of array :";
+    cin>>size;
+
+    int arr[100];
+
+    for(int i =0; i < size;i++)
+    {
+        cin>>arr[i];
+    }
+
+    findEven(arr, size);
+    return 0;
+}
